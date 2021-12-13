@@ -1,0 +1,3 @@
+to run the project type in terminal:
+
+docker-compose up --build -d

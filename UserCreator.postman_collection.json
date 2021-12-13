@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "701036a6-56b5-4b29-961b-81fd4d665a9c",
+		"name": "UserCreator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"Batman\",\n    \"last_name\": \"Snow\",\n    \"hashed_pass\": \"testing\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/login",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "hashed_pass",
+						"value": "ae2b1fca515949e5d54fb22b8ed95575",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/logout",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"Batman\",\n    \"last_name\": \"Snow\",\n    \"role\": \"admin\",\n    \"hashed_pass\": \"testing\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}",
+					"host": [
+						"{{BASE_URL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/61b7c46dc6e666a1bc195705",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"61b7c46dc6e666a1bc195705"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}",
+					"host": [
+						"{{BASE_URL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "hashed_pass",
+						"value": "ae2b1fca515949e5d54fb22b8ed95575",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"Batman\",\n    \"last_name\": \"Snow\",\n    \"role\": \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/61b7c46dc6e666a1bc195705",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"61b7c46dc6e666a1bc195705"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "hashed_pass",
+						"value": "ae2b1fca515949e5d54fb22b8ed95575",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_URL}}/61b7c46dc6e666a1bc195705",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"61b7c46dc6e666a1bc195705"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
